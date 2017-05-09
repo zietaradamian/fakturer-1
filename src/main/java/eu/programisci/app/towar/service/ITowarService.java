@@ -2,6 +2,7 @@ package eu.programisci.app.towar.service;
 
 
 import eu.programisci.app.towar.dto.TowarDTO;
+import eu.programisci.app.towar.enums.EJednostkaMiary;
 import eu.programisci.app.towar.ob.TowarOB;
 
 import java.util.List;

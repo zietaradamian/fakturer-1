@@ -1,24 +1,41 @@
 <h2>Towary</h2>
 
-<span>Id: <input id="towar-id" type="text" style="width:50px" readonly></span>
-<br>
-<span>Nazwa: <input id="towar-nazwa" type="text" style="width:200px"></span>
-<br>
-<span>PKWiU: <input id="towar-pkwiu" type="text" style="width:200px"></span>
-<br>
-<span>Jednostka miary: <select id="towar-jednostka-miary-select"></select></span>
-<br>
-<span>VAT [%]: <input id="towar-vat" type="text" style="width:200px"></span>
-<br>
-<span>Cena netto za jednostkę [zł]: <input id="towar-cena-netto" type="text" style="width:200px"></span>
+<div class="container" style="width: 50%; min-width: 400px; max-width: 600px; float: left">
+<form>
+    <div class="form-group">
+        <label for="towar-id">ID:</label>
+        <input id="towar-id" type="text" readonly class="form-control" >
+    </div>
 
-<br>
-<br>
+    <div class="form-group">
+        <label for="towar-nazwa">Nazwa:</label>
+        <input id="towar-nazwa" type="text" class="form-control" >
+    </div>
 
-<button onclick="saveTowarForm()">Zapisz</button>&nbsp;&nbsp;&nbsp;
-<button onclick="clearTowarForm()">Wyczyść formularz</button>&nbsp;&nbsp;&nbsp;
-<button onclick="deleteSelectedTowar()">Usuń</button>
+    <div class="form-group">
+        <label for="towar-pkwiu">PKWiU:</label>
+        <input id="towar-pkwiu" type="text" class="form-control" >
+    </div>
 
+    <div class="form-group">
+        <label for="towar-jednostka-miary-select">Jednostka miary:</label>
+        <select id="towar-jednostka-miary-select" class="form-control" ></select>
+    </div>
+
+    <div class="form-group">
+        <label for="towar-vat">VAT:</label>
+        <input id="towar-vat" type="text" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label for="towar-cena-netto">Cena netto za jednostkę [zł]:</label>
+        <input id="towar-cena-netto" type="text" class="form-control" >
+    </div>
+    <button onclick="saveTowarForm()">Zapisz</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="clearTowarForm()">Wyczyść formularz</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="deleteSelectedTowar()">Usuń</button>
+</form>
+</div>
 <hr>
 
 <button onclick="getTowarDataForTable()">Odśwież</button>

@@ -1,6 +1,7 @@
 package eu.programisci.app.towar.api;
 
 import eu.programisci.app.towar.dto.TowarDTO;
+import eu.programisci.app.towar.enums.EJednostkaMiary;
 import eu.programisci.app.towar.service.ITowarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -35,8 +36,8 @@ public class TowarRestController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public TowarDTO save(@RequestBody TowarDTO aTowarDTO) {
-        return towarService.save(aTowarDTO);
-    }
+    public TowarDTO save(@RequestBody TowarDTO aTowarDTO) { return towarService.save(aTowarDTO); }
 
+    @RequestMapping(value="/getJednostkiMiary", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public EJednostkaMiary[] getJednostkiMiary() { return EJednostkaMiary.values(); }
 }

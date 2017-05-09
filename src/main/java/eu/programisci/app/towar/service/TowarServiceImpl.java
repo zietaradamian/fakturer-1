@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 @Service
-public class TowarServiceImpl implements ITowarService {
+public class TowarServiceImpl implements ITowarService{
 
     @Autowired
     private ITowarRepository towarRepository;

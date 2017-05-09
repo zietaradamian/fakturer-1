@@ -28,6 +28,7 @@ public class TowarOB {
     private String pkwiu;
 
     @Column(name = "jednostkaMiary")
+    @Enumerated(EnumType.STRING)
     private EJednostkaMiary jednostkaMiary;
 
     @Column(name = "vat")
